@@ -1,0 +1,35 @@
+//INICIO PROBLEMA 2
+
+#include <iostream>
+
+using namespace std;
+
+bool fibonacci(long long x) {
+    long long a = 0;
+    long long b = 1;
+
+    while (b < x) {
+        long long temp = b;
+        b += a;
+        a = temp;
+    }
+
+    return b == x;
+}
+
+int main() {
+    long long n;
+    cout << "digite um numero: ";
+    cin >> n;
+
+    if (fibonacci(n)) {
+        cout << "Seu numero faz parte da sequencia de fibonacci" << endl;
+    } 
+    else {
+        cout << "Seu numero nao faz parte da sequencia de fibonacci" << endl;
+    }
+
+    return 0;
+}
+
+// FIM PROBLEMA 2
